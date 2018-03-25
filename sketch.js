@@ -1,3 +1,4 @@
+var score
 	
 function setup() {
   // runs once on startup
@@ -5,14 +6,14 @@ function setup() {
   s = new Snake(20);
   a = new Apple(70, 70);
   frameRate(10);
-  var score = 0;
+  score = 0;
 }
 
 function draw() {
   // repeats every frame
   background(51);
   textSize(50);
-  text(score, 10, 10);
+  text(score, 10, 50);
   
   a.draw();
   s.update();
