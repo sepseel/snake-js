@@ -35,14 +35,16 @@ function Snake(size) {
 	}
 	
 	
-	this.death = function() {
+	this.death = function(score) {
 		var head = this.tail[this.len-1];
 		for (i = 0; i < this.len-2; i++) {
 			var body = this.tail[i];
 			if (head.x == body.x && head.y == body.y) {
 				this.len = 2;
+				score = 0
 			}
 		}
+		return score;
 	}
 	
 	this.dir = function(x, y) {

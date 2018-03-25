@@ -5,20 +5,24 @@ function setup() {
   s = new Snake(20);
   a = new Apple(70, 70);
   frameRate(10);
+  var score = 0;
 }
 
 function draw() {
   // repeats every frame
   background(51);
+  textSize(50);
+  text(score, 620, 40);
   
   a.draw();
   s.update();
   s.draw();
-  s.death();
+  score = s.death(score);
   
   if (s.x == a.x-10 && s.y == a.y-10) {
   	s.grow();
   	a.update();
+  	score += 10;
   }
 }
 
