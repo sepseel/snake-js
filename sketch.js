@@ -23,13 +23,13 @@ function draw() {
 }
 
 function keyPressed() {
-	if (keyCode === UP_ARROW && s.xvel != 1) {
+	if (keyCode === UP_ARROW && s.yvel != 1) {
 		s.dir(0, -1);
-	} else if (keyCode === DOWN_ARROW && s.xvel != -1) {
+	} else if (keyCode === DOWN_ARROW && s.yvel != -1) {
 		s.dir(0, 1);
-	} else if (keyCode === LEFT_ARROW && s.yvel != 1) {
+	} else if (keyCode === LEFT_ARROW && s.xvel != 1) {
 		s.dir(-1, 0);
-	} else if (keyCode === RIGHT_ARROW && s.yvel != -1) {
+	} else if (keyCode === RIGHT_ARROW && s.xvel != -1) {
 		s.dir(1, 0);
 	}
 }
