@@ -12,7 +12,7 @@ function draw() {
   // repeats every frame
   background(51);
   textSize(50);
-  text(score, 620, 40);
+  text(score, 10, 10);
   
   a.draw();
   s.update();
